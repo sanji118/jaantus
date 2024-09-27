@@ -35,12 +35,25 @@ let me2 = {
 
 me2.thisInRegular();//output: My name is Sanjida
 
-//method: 1
+//method:single or one parameter--> 1
 const getAge = (person) => person.age;
 const student = { name: 'sanjida', age: 45}
 const age = getAge(student);
 console.log(age);
-//method: 2
+// 2
 const getThird = numbers => numbers[2];
 const third = getThird([5, 9, 88, 2, 13])
 console.log(third);
+
+//method: no parameter --> 1
+const getPi = () => Math.PI;
+console.log(getPi);
+
+//large arrow function. if you want to get anything returned from this function. then you have to use the return keyword
+
+const doMath = (x, y, z) => {
+    const sum = x + y + z;
+    const mult = x * y * z;
+    const result = sum + mult
+    return result
+}
