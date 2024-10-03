@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Explore</title>
+    <style>
+        .post{
+            background-color: rgb(248, 174, 225);
+            padding: 20px;
+            margin: 16px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
-<body>
-    <div style="background-color: rgba(243, 243, 102, 0.901);">
+<body style="font-family: Georgia, 'Times New Roman', Times, serif;">
+    <div style="background-color: rgba(243, 243, 102, 0.901);padding: 16px; margin: 20px;">
         <h1 style="text-align: center;">What is an API</h1>
     <p>1. API stands for <b>Application Programming Interface</b></p>
     <p>
@@ -16,7 +24,7 @@
         3. API is the part of the server that receives requests and sends responses.
     </p>
     </div>
-    <div style="background-color: rgba(201, 250, 116, 0.901);">
+    <div style="background-color: rgba(201, 250, 116, 0.901);padding: 16px;margin: 20px;">
         <h1 style="text-align: center;">
             FETCH API
         </h1>
@@ -30,8 +38,64 @@
             </p>
         </P>
     </div>
-    <div></div>
-    <button onclick="loading()">Load More</button>
+    <div style="background-color: rgba(247, 212, 151, 0.901);padding: 16px; margin: 20px;">
+        <h1 style="text-align: center;">CRUD</h1>
+        <p>CRUD is the acronym for CREATE, READ, UPDATE and DELETE</p>
+        <ul type="square">
+            <h3 style="text-align: center;">REST API METHOD:</h3>
+            <li><B>GET: </B>Recieve information about an API resource</li>
+            <li><b>POST: </b>Create an API resource</li>
+            <li><b>PUT/PATCH: </b>Update an API resource</li>
+            <li><b>DELETE: </b>Delete an API resource</li>
+        </ul>
+    </div>
+    <div style="text-align: center;background-color: rgba(181, 248, 80, 0.901);padding: 16px; margin: 20px;">
+        <h1 >HTTP STATUS CODE</h1>
+        <table style="border: 2px solid black;margin: auto;width: 70%;">
+            <tr>
+                <th>Code</th>
+                <th>Message</th>
+            </th>
+            <tr>
+                <td>200</td>
+                <td>OK</td>
+            </tr>
+            <tr>
+                <td>301</td>
+                <td>Moved Permanently</td>
+            </tr>
+            <tr>
+                <td>302</td>
+                <td>Moved Temporarily</td>
+            </tr>
+            <tr>
+                <td>404</td>
+                <td>Not Found</td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>Internal Server Error</td>
+            </td>
+            <tr>
+                <td>503</td>
+                <td>Service Unavailable</td>
+            </tr>
+        </table>
+    </div>
+    
+    <button onclick="loading()" style="border: none;background-color: orchid;font: bold;padding: 16px; border-radius: 8px;margin: 20px;">Load More</button>
+    <button onclick="loadUsers()" style="border: none;background-color: rgb(174, 232, 237); font: bold;padding: 16px;border-radius: 8px; margin: 20px;">User button </button>
+    <button onclick="loadPosts()" style="border: none;background-color: rgb(247, 190, 246); font: bold;padding: 16px;border-radius: 8px; margin: 20px;">post button </button>
+    <button onclick="loadComments()" style="border: none;background-color: rgb(245, 141, 144); font: bold;padding: 16px;border-radius: 8px; margin: 20px;">Comment button </button>
+    <div id="users-container"></div>
+        <ul id="users-list">
+            
+        </ul>
+    </div>
+    <section id="post-container">
+        
+    </section>
     <script src="json/fetch.js"></script>
+    <script src="json/index.js"></script>
 </body>
 </html>
