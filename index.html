@@ -95,7 +95,69 @@
     <section id="post-container">
         
     </section>
+
+    <section>
+        <div style="text-align: center;padding: 16px; margin: 20px;">
+            <h1>Single-threaded</h1>
+            <ul>
+                <li><span style="color: red;">Single-threaded</span> means only one statement is executed at a time.</li>
+                <li>JavaScript only has one call stack.</li>
+                <li>JavaScript runs code line by line.</li>
+                <li>Must finish executing a pieceof code before moving onto the next.</li>
+            </ul>
+        </div>
+        <div style="text-align: center;background-color: rgba(210, 248, 155, 0.901);padding: 16px; margin: 20px;">
+            <h3>Synchronous vs Asynchronous</h3>
+            <table style="border: 2px solid black;margin: auto;width: 70%;">
+                <tr>
+                    <th>key difference</th>
+                    <th>Synchronous</th>
+                    <th>Asynchronous</th>
+                </tr>
+                <tr>
+                    <td>Execution Flow</td>
+                    <td>The code executes in order, and one task must complete before the next begins.</td>
+                    <td>The code doesn’t wait for tasks like network calls to complete. Instead, they run in the background, allowing the rest of the code to execute.</td>
+                </tr>
+                <tr>
+                    <td>Blocking vs Non-blocking</td>
+                    <td>Synchronous code is blocking. It waits for operations to complete.
+                    </td>
+                    <td>Asynchronous code is non-blocking. The operations happen in the background.</td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align: center;background-color: rgba(241, 254, 128, 0.901);padding: 16px; margin: 20px;">
+            <h1>How Asynchronous JavaScript works?</h1>
+            <ul>
+                <li>The (anonymous) function executes the script</li>
+                <li>main() calls first() and first() calls setTimeout().</li>
+                <li>setTimeout() pops off the call stack before main() can call second()</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h1>Promise and Async/Await</h1>
+        <div>
+            <h3>Promise</h3>
+            <p>The Promise object represents the eventual <b>completion</b> (or <b>failure</b>) of an <b>Asynchronous</b> operation and its resulting value. A Promise is in one of these states.</p>
+            <ul>
+                <li>Pending:   initial state, neither fulfilled nor rejected.</li>
+                <li>Resolve:   the operation was completed sucessfully.</li>
+                <li>Reject:    the operation failed.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Fetch API</h3>
+            <ul>
+                <li>The fetch() method starts the process of fetching a resource from a server.</li>
+                <li>The fetch() method returns a Promise that resolves to a Response object</li>
+                <li>A fetch() method only rejects when a network error is encountered.</li>
+            </ul>
+        </div>
+    </section>
     <script src="json/fetch.js"></script>
     <script src="json/index.js"></script>
+    <script src="json/async.js"></script>
 </body>
 </html>
